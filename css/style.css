@@ -1,0 +1,128 @@
+/* Variables will input soon */
+* {
+  font-family: Poppins;
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  background-color: #fef5ef;
+}
+
+header {
+  background-color: #5d2a42;
+  padding: 45px;
+}
+header nav a {
+  color: white;
+  text-decoration: none;
+  padding: 16px;
+  font-size: 16px;
+}
+
+footer {
+  background-color: #5d2a42;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+footer p {
+  margin: 0;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  color: white;
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fef5ef;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #dc2b60;
+  color: white;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #dc2b60;
+}
+
+.page-links h1 {
+  font-size: 48px;
+  color: #dc2b60;
+  margin: 30px 20px;
+}
+.page-links li {
+  color: #5d2a42;
+  font-size: 16px;
+  margin: 0px 30px;
+}
+.page-links li a {
+  text-decoration: none;
+  color: black;
+}
+
+#art {
+  font-size: 48px;
+  color: #dc2b60;
+  margin: 30px 20px;
+}
+
+.art-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.art-gallery figure {
+  text-align: center;
+}
+
+.questions h1 {
+  font-size: 48px;
+  color: #dc2b60;
+  margin: 25px;
+  margin-left: 60px;
+}
+.questions h2 {
+  font-size: 32px;
+  color: #dc2b60;
+  margin: 5px 60px;
+}
+.questions p {
+  margin: 5px 60px;
+  text-wrap: wrap;
+}
+.questions li {
+  margin-left: 60px;
+}/*# sourceMappingURL=style.css.map */
