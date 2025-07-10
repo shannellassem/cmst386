@@ -1,3 +1,4 @@
+name: Deploy HTML Files to AppService - CMST386
 on:
 
   push:
