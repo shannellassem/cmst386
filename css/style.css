@@ -1,6 +1,7 @@
-/* Variables will input soon */
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap");
+/* Variables will input soon. Using variable makes things easier becuase if I change something in the variable, it changes whereever I used the variable and I don't have to do it one by one. */
 * {
-  font-family: Poppins;
+  font-family: "Quicksand";
   margin: 0px;
   padding: 0px;
 }
@@ -11,13 +12,81 @@ body {
 
 header {
   background-color: #5d2a42;
-  padding: 45px;
+  padding: 10px;
+  /* old menu before hamburger menu
+      nav {
+
+        a {
+          color: white;
+          text-decoration: none;
+          padding: 16px;
+          font-size: 16px;
+        }
+      }
+        */
 }
-header nav a {
+header .main-nav {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .main-nav .hamburger {
+  font-size: 30px;
+  color: #fef5ef;
+  display: none;
+  cursor: pointer;
+}
+header .main-nav #menu-toggle {
+  display: none;
+}
+header .main-nav .nav-links {
+  display: flex;
+  gap: 20px;
+}
+header .main-nav .nav-links a {
   color: white;
   text-decoration: none;
-  padding: 16px;
-  font-size: 16px;
+  font-weight: bold;
+}
+header .main-nav .nav-links .dropdown {
+  position: relative;
+}
+header .main-nav .nav-links .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #666;
+  min-width: 120px;
+}
+header .main-nav .nav-links .dropdown .dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+header .main-nav .nav-links .dropdown:hover .dropdown-content {
+  display: block;
+}
+@media (max-width: 768px) {
+  header .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header .main-nav .hamburger {
+    display: block;
+    margin-bottom: 10px;
+  }
+  header .main-nav .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+  header .main-nav .nav-links .dropdown-content {
+    position: static;
+  }
+  header .main-nav #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
 }
 
 footer {
@@ -81,6 +150,7 @@ footer p {
   font-size: 48px;
   color: #dc2b60;
   margin: 30px 20px;
+  font-weight: 700;
 }
 .page-links li {
   color: #5d2a42;
@@ -93,9 +163,10 @@ footer p {
 }
 
 #art {
-  font-size: 48px;
+  font-size: 32px;
   color: #dc2b60;
   margin: 30px 20px;
+  text-align: center;
 }
 
 .art-gallery {
@@ -109,20 +180,211 @@ footer p {
 }
 
 .questions h1 {
-  font-size: 48px;
-  color: #dc2b60;
-  margin: 25px;
-  margin-left: 60px;
-}
-.questions h2 {
   font-size: 32px;
   color: #dc2b60;
-  margin: 5px 60px;
+  margin: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+.questions h2 {
+  font-size: 24px;
+  color: #dc2b60;
+  margin: 5px 25px;
 }
 .questions p {
-  margin: 5px 60px;
+  margin: 5px 25px;
   text-wrap: wrap;
+  font-size: 16px;
 }
 .questions li {
+  margin: 5px 25px;
+}
+
+.website_proposal h1 {
+  font-size: 32px;
+  color: #dc2b60;
+  margin: 25px 0;
+  font-weight: 700;
+  text-align: center;
+}
+.website_proposal h2 {
+  font-size: 24px;
+  color: #dc2b60;
+  margin: 10px 25px;
+}
+.website_proposal p {
+  margin: 2px 25px;
+  text-wrap: wrap;
+}
+.website_proposal li {
   margin-left: 60px;
+}
+
+.responsive h1 {
+  font-size: 32px;
+  color: #dc2b60;
+  margin: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+.responsive h2 {
+  font-size: 24px;
+  color: #000000;
+  margin: 10px 25px;
+}
+.responsive p {
+  margin: 5px 25px;
+  text-wrap: wrap;
+}
+
+.analytics h1 {
+  font-size: 32px;
+  color: #dc2b60;
+  margin: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+.analytics h2 {
+  font-size: 24px;
+  color: #000000;
+  margin: 5px 25px;
+}
+.analytics p {
+  margin: 5px 25px;
+  text-wrap: wrap;
+}
+.analytics li {
+  margin: 5px 25px;
+  text-wrap: wrap;
+  padding: 5px 0;
+}
+
+.processing button {
+  background-image: linear-gradient(to right, rgb(220, 43, 96), rgb(93, 42, 66));
+  padding: 25px;
+  border-radius: 20px;
+  margin: 10px;
+}
+.processing button:hover {
+  border: 2px solid #5d2a42;
+  background-color: transparent;
+  opacity: 0.7;
+}
+.processing button:hover #processing {
+  color: black;
+}
+.processing button #processing {
+  color: #fef5ef;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.server h1 {
+  font-size: 32px;
+  color: #dc2b60;
+  margin: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+.server h2 {
+  font-size: 24px;
+  color: #000000;
+  margin: 5px 25px;
+}
+.server p {
+  margin: 5px 25px;
+  text-wrap: wrap;
+}
+
+.sass .left_col {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0;
+}
+.sass .left_col img {
+  width: 50%;
+}
+.sass h1 {
+  font-size: 32px;
+  color: #dc2b60;
+  margin: 25px;
+  font-weight: 700;
+  text-align: center;
+}
+.sass h2 {
+  font-size: 24px;
+  color: #000000;
+  margin: 5px 25px;
+}
+.sass h3 {
+  font-size: 18px;
+  color: #000000;
+  margin: 10px 25px;
+}
+.sass p {
+  margin: 5px 25px;
+  text-wrap: wrap;
+}
+.sass li {
+  margin: 5px 25px;
+  text-wrap: wrap;
+  padding: 5px 0;
+}
+
+.anchor {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.breadcrumb {
+  padding: 10px 0;
+}
+.breadcrumb a {
+  font-weight: 700;
+  text-decoration: none;
+  color: #dc2b60;
+}
+.breadcrumb span {
+  text-decoration: underline;
+}
+
+/* Tablet */
+@media screen and (min-width: 600px) {
+  .sass .container {
+    display: flex;
+    flex-direction: row;
+  }
+  .sass .left_col {
+    padding: 10px 0;
+  }
+  .sass .left_col img {
+    max-width: 50%;
+    max-height: 40%;
+  }
+}
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  #art {
+    font-size: 32px;
+    color: #dc2b60;
+    margin: 30px 20px;
+    text-align: left;
+  }
+  .questions h1 {
+    text-align: left;
+  }
+  .questions h2 {
+    text-align: left;
+  }
+  .website_proposal h1 {
+    font-size: 32px;
+    color: #dc2b60;
+    margin: 25px 25px;
+    font-weight: 700;
+    text-align: left;
+  }
+  .server h1 {
+    text-align: left;
+  }
 }/*# sourceMappingURL=style.css.map */
