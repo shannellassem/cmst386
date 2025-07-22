@@ -1,24 +1,25 @@
-/* Variables will input soon */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap');
+
+/* Variables will input soon. Using variable makes things easier becuase if I change something in the variable, it changes whereever I used the variable and I don't have to do it one by one. */
 $pink: #dc2b60;
 $darker-pink: #5d2a42;
 $background: #fef5ef;
 
 
 * {
-  font-family: Poppins;
+  font-family: 'Quicksand';
   margin: 0px;
   padding: 0px;
 }
 body {
-    background-color: #fef5ef;
+    background-color: $background;
 }
 header {
-    background-color: #5d2a42;
-    padding: 45px;
-
+    background-color: $darker-pink;
+    padding: 10px;
+/* old menu before hamburger menu
     nav {
       
-
       a {
         color: white;
         text-decoration: none;
@@ -26,9 +27,85 @@ header {
         font-size: 16px;
       }
     }
+      */
+
+      .main-nav {
+        padding: 15px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        position: relative;
+      
+        .hamburger {
+          font-size: 30px;
+          color: $background;
+          display: none;
+          cursor: pointer;
+        }
+      
+        #menu-toggle {
+          display: none;
+        }
+      
+        .nav-links {
+          display: flex;
+          gap: 20px;
+      
+          a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+          }
+      
+          .dropdown {
+            position: relative;
+      
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #666;
+              min-width: 120px;
+              a {
+                display: block;
+                padding: 10px;
+                color: white;
+              }
+            }
+      
+            &:hover .dropdown-content {
+              display: block;
+            }
+          }
+        }
+      
+        @media (max-width: 768px) {
+          flex-direction: column;
+          align-items: flex-start;
+      
+          .hamburger {
+            display: block;
+            margin-bottom: 10px;
+          }
+      
+          .nav-links {
+            flex-direction: column;
+            width: 100%;
+            display: none;
+      
+            .dropdown-content {
+              position: static;
+            }
+          }
+      
+          #menu-toggle:checked + .hamburger + .nav-links {
+            display: flex;
+          }
+        }
+      }
+
 }
 footer {
-  background-color: #5d2a42;
+  background-color: $darker-pink;
   color: white;
   text-align: center;
   padding: 1rem 0;
@@ -74,7 +151,7 @@ footer {
   /* Change color of dropdown links on hover */
   .dropdown-content a:hover {
     
-    background-color: #dc2b60;
+    background-color: $pink;
     color: white;
   }
   
@@ -87,12 +164,13 @@ footer {
   .page-links {
     h1 {
       font-size: 48px;
-      color: #dc2b60;
+      color: $pink;
       margin: 30px 20px;
+      font-weight: 700;
     }
 
     li {
-      color: #5d2a42;
+      color: $darker-pink;
       font-size: 16px;
       margin: 0px 30px;
 
@@ -104,9 +182,10 @@ footer {
   }
 
   #art {
-    font-size: 48px;
-      color: #dc2b60;
+    font-size: 32px;
+      color: $pink;
       margin: 30px 20px;
+      text-align: center;
   }
 
 .art-gallery {
@@ -123,23 +202,267 @@ footer {
 
 .questions {
   h1 {
-    font-size: 48px;
-    color: #dc2b60;
+    font-size: 32px;
+    color: $pink;
     margin: 25px;
-    margin-left: 60px;
+    font-weight: 700;
+    text-align: center;
   }
   h2 {
-    font-size: 32px;
-    color: #dc2b60;
-    margin: 5px 60px;
+    font-size: 24px;
+    color: $pink;
+    margin: 5px 25px;
   }
 
   p {
-    margin: 5px 60px;
+    margin: 5px 25px;
+    text-wrap: wrap;
+    font-size: 16px;
+  }
+
+  li {
+    margin: 5px 25px;
+  }
+}
+
+.website_proposal {
+  h1 {
+    font-size: 32px;
+    color: $pink;
+    margin: 25px 0;
+    font-weight: 700;
+    text-align: center;
+  }
+  h2 {
+    font-size: 24px;
+    color: $pink;
+    margin: 10px 25px;
+    
+  }
+
+  p {
+    margin: 2px 25px;
     text-wrap: wrap;
   }
 
   li {
     margin-left: 60px;
   }
+}
+
+.responsive {
+  h1 {
+    font-size: 32px;
+    color: $pink;
+    margin: 25px;
+    font-weight: 700;
+    text-align: center;
+  }
+  h2 {
+    font-size: 24px;
+    color: #000000;
+    margin: 10px 25px;
+    
+  }
+
+  p {
+    margin: 5px 25px;
+    text-wrap: wrap;
+  }
+}
+
+.analytics {
+  h1 {
+    font-size: 32px;
+    color: $pink;
+    margin: 25px;
+    font-weight: 700;
+    text-align: center;
+  }
+  h2 {
+    font-size: 24px;
+    color: #000000;
+    margin: 5px 25px;
+  }
+
+  p {
+    margin: 5px 25px;
+    text-wrap: wrap;
+  }
+  li {
+    margin: 5px 25px;
+    text-wrap: wrap;
+    padding: 5px 0;
+  }
+}
+
+.processing {
+  button {
+    background-image: linear-gradient(to right, rgba(220, 43, 96), rgba(93, 42, 66));
+    padding: 25px;
+    border-radius: 20px;
+    margin: 10px;
+
+    &:hover {
+      border: 2px solid $darker-pink; // adds solid border on hover
+      background-color: transparent;
+
+      
+      opacity: 0.7; 
+
+      #processing {
+        color: black;
+      }
+    }
+
+    #processing {
+      color: $background;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    
+  }
+
+  
+}
+
+.server {
+  h1 {
+    font-size: 32px;
+    color: $pink;
+    margin: 25px;
+    font-weight: 700;
+    text-align: center;
+  }
+  h2 {
+    font-size: 24px;
+    color: #000000;
+    margin: 5px 25px;
+  }
+
+  p {
+    margin: 5px 25px;
+    text-wrap: wrap;
+  }
+
+}
+.sass {
+  .left_col {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+
+    img {
+      width: 50%;
+    }
+  }
+  h1 {
+    font-size: 32px;
+    color: $pink;
+    margin: 25px;
+    font-weight: 700;
+    text-align: center;
+  }
+  h2 {
+    font-size: 24px;
+    color: #000000;
+    margin: 5px 25px;
+  }
+  h3 {
+    font-size: 18px;
+    color: #000000;
+    margin: 10px 25px;
+  }
+
+  p {
+    margin: 5px 25px;
+    text-wrap: wrap;
+  }
+  li {
+    margin: 5px 25px;
+    text-wrap: wrap;
+    padding: 5px 0;
+  }
+
+}
+
+.anchor {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.breadcrumb {
+  padding: 10px 0;
+
+  a {
+    font-weight: 700;
+    text-decoration: none;
+    color: $pink;
+  }
+
+  span {
+    text-decoration: underline;
+  }
+}
+/* Tablet */
+@media screen and (min-width: 600px) {
+
+
+  .sass {
+    .container {
+      display: flex;
+        flex-direction: row;
+    }
+
+
+    .left_col {
+      
+      padding: 10px 0;
+  
+      img {
+        max-width: 50%;
+        max-height: 40%
+      }
+    }
+  }
+
+
+}
+
+/* Desktop */
+@media screen and (min-width: 1024px) {
+  #art {
+    font-size: 32px;
+      color: $pink;
+      margin: 30px 20px;
+      text-align: left;
+  }
+  .questions {
+    h1 {
+      text-align: left;
+    }
+    h2 {
+      text-align: left;
+    }
+  }
+
+  .website_proposal {
+    h1 {
+      font-size: 32px;
+      color: $pink;
+      margin: 25px 25px;
+      font-weight: 700;
+      text-align: left;
+      
+    }
+
+  }
+  .server {
+    h1 {
+      text-align: left;
+    }
+  }
+  
+
 }
