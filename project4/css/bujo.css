@@ -1,0 +1,539 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+/*Variables*/
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+header {
+  background-color: #B8D8EF;
+  padding: 10px;
+}
+header .main-nav {
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+header .main-nav #logo-nav {
+  font-family: "Shrikhand", serif;
+  text-decoration: none;
+  color: #2F5A76;
+  font-size: 26px;
+}
+header .main-nav .hamburger {
+  font-size: 30px;
+  color: #2F5A76;
+  display: none;
+  cursor: pointer;
+}
+header .main-nav #menu-toggle {
+  display: none;
+}
+header .main-nav .nav-links {
+  display: flex;
+  gap: 20px;
+}
+header .main-nav .nav-links a {
+  color: #2F5A76;
+  text-decoration: none;
+  font-family: "Nunito", sans-serif;
+}
+header .main-nav .nav-links .dropdown {
+  position: relative;
+}
+header .main-nav .nav-links .dropdown .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #4A3F6B;
+  min-width: 120px;
+}
+header .main-nav .nav-links .dropdown .dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+header .main-nav .nav-links .dropdown:hover .dropdown-content {
+  display: block;
+}
+@media (max-width: 768px) {
+  header .main-nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header .main-nav .hamburger {
+    display: block;
+    margin-bottom: 10px;
+  }
+  header .main-nav .nav-links {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+  header .main-nav .nav-links a:hover {
+    font-weight: 700;
+  }
+  header .main-nav .nav-links .dropdown-content {
+    position: static;
+  }
+  header .main-nav #menu-toggle:checked + .hamburger + .nav-links {
+    display: flex;
+  }
+}
+
+.hero {
+  padding-bottom: 35px;
+}
+.hero h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 26px;
+  color: #2F5A76;
+  margin: 20px;
+}
+.hero p {
+  margin: 0 20px;
+  padding: 5px 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+.hero .hero-img {
+  background-size: cover;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.mission {
+  background-color: #B8D8EF;
+  padding: 30px 0;
+}
+.mission h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 26px;
+  color: #2F5A76;
+  margin: 20px 0;
+  text-align: center;
+}
+.mission p {
+  margin: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+.join h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 20px;
+  color: #2F5A76;
+  margin: 10px 20px;
+}
+.join p {
+  margin: 10px 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+.join button {
+  font-family: "Shrikhand", serif;
+  background-color: #4A3F6B;
+  display: flex;
+  width: 147px;
+  height: 53px;
+  padding: 11px 21px;
+  margin: 30px 20px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.join button:hover {
+  background-color: transparent;
+  border: 2px solid #4A3F6B;
+  color: #4A3F6B;
+}
+
+.story .divider {
+  background-color: #B8D8EF;
+  font-family: "Shrikhand", serif;
+  padding: 30px 20px;
+  font-size: 20px;
+  color: #2F5A76;
+}
+.story p {
+  margin: 10px 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+.browse-guides h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 20px;
+  color: #2F5A76;
+  margin: 20px;
+}
+.browse-guides .guides h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: #2F5A76;
+  text-align: center;
+  margin: 10px 0px;
+  padding: 30px 0 10px 0;
+  font-weight: 700;
+}
+.browse-guides .guides img {
+  margin: 0 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.browse-guides .guides p {
+  margin: 0 0px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  margin: 10px 20px;
+  text-align: center;
+}
+
+.search h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 26px;
+  color: #2F5A76;
+  margin: 10px 20px;
+}
+
+.tips-and-advice h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 20px;
+  color: #2F5A76;
+  background-color: #B8D8EF;
+  text-align: center;
+  padding: 25px 0;
+}
+.tips-and-advice .forum-post h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: #2F5A76;
+  margin: 5px 20px;
+  padding: 5px 0 10px 0;
+  font-weight: 700;
+}
+.tips-and-advice .forum-post p {
+  margin: 0px 20px;
+  padding-bottom: 10px;
+}
+
+.recommendations h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 20px;
+  color: #2F5A76;
+  background-color: #B8D8EF;
+  text-align: center;
+  padding: 25px 0;
+}
+.recommendations .forum-post h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: #2F5A76;
+  margin: 5px 20px;
+  padding: 5px 0 10px 0;
+  font-weight: 700;
+}
+.recommendations .forum-post p {
+  margin: 0px 20px;
+  padding-bottom: 10px;
+}
+
+.starter-guide h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 20px;
+  color: #2F5A76;
+  margin: 20px;
+}
+.starter-guide p {
+  margin: 10px 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+.starter-guide .beginner-articles h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: #2F5A76;
+  text-align: center;
+  margin: 10px 0px;
+  padding: 2px 0 10px 0;
+  font-weight: 700;
+}
+.starter-guide .beginner-articles img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  padding: 10px 0;
+}
+.starter-guide .beginner-articles p {
+  padding-bottom: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  margin: 10px 20px;
+  text-align: center;
+}
+
+.videos h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 20px;
+  margin: 10px 20px;
+  color: #2F5A76;
+}
+.videos a {
+  text-decoration: none;
+}
+
+.video-preview {
+  text-align: center;
+  max-width: 600px;
+  margin: 2rem auto;
+}
+.video-preview img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+.video-preview img:hover {
+  transform: scale(1.02);
+}
+.video-preview figcaption {
+  margin-top: 0.5rem;
+  font-size: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif;
+  color: #2F5A76;
+  font-weight: 700;
+}
+
+.supply-list h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 20px;
+  margin: 10px 20px;
+  color: #2F5A76;
+}
+.supply-list li {
+  margin: 10px 30px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+.supply-list p {
+  margin: 20px;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  background-color: #4A3F6B;
+  color: white;
+  padding: 20px;
+}
+
+.seasonal h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 20px;
+  margin: 10px 20px;
+  color: #2F5A76;
+}
+.seasonal p {
+  margin: 10px 20px;
+  padding: 5px 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+.mood h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 20px;
+  margin: 10px 20px;
+  color: #2F5A76;
+}
+.mood p {
+  margin: 10px 20px;
+  padding: 5px 0;
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+}
+
+.mosaic-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-gap: 1rem;
+  max-width: 386px;
+  margin: 0 auto;
+}
+.mosaic-container .tile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  transition: transform 0.5s ease;
+}
+.mosaic-container .tile img:hover {
+  transform: scale(1.1);
+}
+.mosaic-container .tile:nth-child(1) {
+  grid-column: span 3;
+  grid-row: span 2;
+}
+.mosaic-container .tile:nth-child(2), .mosaic-container .tile:nth-child(3) {
+  grid-column: span 3;
+}
+.mosaic-container .tile:nth-child(4), .mosaic-container .tile:nth-child(5), .mosaic-container .tile:nth-child(6) {
+  grid-column: span 2;
+}
+
+@media screen and (max-width: 780px) {
+  .container {
+    display: block;
+  }
+  .container .tile {
+    margin-bottom: 1rem;
+  }
+}
+.merch h2 {
+  font-family: "Shrikhand", serif;
+  font-size: 20px;
+  margin: 10px 20px;
+  color: #2F5A76;
+}
+.merch img {
+  margin: 0 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+}
+.merch h3 {
+  font-family: "Nunito", sans-serif;
+  font-size: 16px;
+  color: #2F5A76;
+  text-align: center;
+  margin: 10px 0px;
+  padding: 2px 0 10px 0;
+  font-weight: 700;
+}
+
+.newsletter h1 {
+  font-family: "Shrikhand", serif;
+  font-size: 26px;
+  margin: 10px 20px;
+  color: #2F5A76;
+}
+.newsletter p {
+  font-family: "Nunito", sans-serif;
+  font-size: 14px;
+  margin: 10px 20px;
+}
+
+.title {
+  font-family: "Shrikhand", serif;
+}
+
+form {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+}
+form fieldset {
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  border-radius: 8px;
+}
+form legend {
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+  font-weight: bold;
+}
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-family: "Nunito", sans-serif;
+}
+form input[type=text],
+form input[type=email],
+form textarea,
+form select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+form input[type=checkbox],
+form input[type=radio] {
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+form .checkbox-group,
+form .radio-group {
+  margin-bottom: 1rem;
+}
+form button[type=submit] {
+  font-family: "Shrikhand", serif;
+  background-color: #4A3F6B;
+  display: flex;
+  width: 147px;
+  height: 53px;
+  padding: 11px 21px;
+  margin: 30px 20px;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+form button[type=submit]:hover {
+  background-color: transparent;
+  border: 2px solid #4A3F6B;
+  color: #4A3F6B;
+}
+
+footer {
+  background-color: #4A3F6B;
+  padding: 30px;
+  margin-top: 50px;
+}
+footer p {
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+}
+footer a {
+  color: white;
+  font-family: "Nunito", sans-serif;
+  font-size: 12px;
+}
+
+@media (min-width: 1080px) {
+  #homepage {
+    display: flex;
+  }
+  #homepage .left-col {
+    margin-top: 20px;
+  }
+  #homepage .left-col img {
+    width: 811px;
+    height: 393px;
+  }
+  .mission h1 {
+    text-align: left;
+    margin-left: 20px;
+  }
+  footer .container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  header a:hover {
+    font-weight: 700;
+  }
+}/*# sourceMappingURL=bujo.css.map */
